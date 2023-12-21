@@ -3,8 +3,8 @@ the username is: john galt, and the password: more-secure-password. But if we in
 will end without showing the flag. We need to analyze it better, and will eventually find out that there
 is a function called printFlag that is not called but we need to. 
 Steps (with gdb):
-1. insert a breakpoint for example just before the input given by the user
-2. find out the address of the printFlag function
+1. insert a breakpoint for example just before the input given by the user or at the main (b main)
+2. find out the address of the printFlag function (0x56555789)
 3. run the program
 4. when it stops on breakpoint, call a jump to printFlag, with its address or by name
 5. BOOM! you have the flag
