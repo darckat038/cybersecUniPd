@@ -1,6 +1,6 @@
 #So in this case we have a function named print_flag, we need to execute it.
 #By analysing the program we notice that there is NO padding/alignement
-#in memory by the compiler, so we can apply overflow easily
+#in memory by the compiler (see findPadding.txt), so we can apply overflow easily
 
 #So we can fill the buffer variable(32 bytes), the base pointer (32 bytes)
 #and then we can get the function address where we need to jump, by searching
