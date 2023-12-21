@@ -1,0 +1,8 @@
+In this program, if we analyze it, we will find out that it simply take a string 
+as input and directly compare it with the flag. We need to find and print the 
+memory location where the string (of the flag) is saved.
+Steps with gdb:
+1. we put a breakpoint just before or at the compare instruction
+2. we need to analyze the registers that may be use by strcmp function
+3. we can see that rax contains the string give by us
+4. but if we analyze the rdi and rsi registers, BOOM! rsi contains the flag

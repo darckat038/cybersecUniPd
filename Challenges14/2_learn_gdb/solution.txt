@@ -1,0 +1,8 @@
+Analyzing this problem we can see that it calls a function named decrypt_flag. This function write
+the flag in a variable named <flag_buf> but does not print it. We need to execute the function
+and then print the memory address corresponding to the variable.
+Steps with gdb:
+1. with gdb we put a breakpoint just after the call to the decrypt_flag function
+2. then, when the function is executed we need to find the variable name or its address
+3. we have to print it, IMPORTANT TO CAST IT IN A CHAR*, otherwise will not be readable
+4. BOOM! Here is the flag

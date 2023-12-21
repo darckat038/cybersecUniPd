@@ -1,0 +1,9 @@
+So here the program is a little bit more diffucult.
+As we can see it asks for an input, and that is stored
+in a variable inside a struct, and then, just below that variable 
+there is another one that store the pointer to a function to 
+be executed at the end. 
+The goal here is to fill up the favourite_lang
+variable and then overwrite the call variable with the address 
+of the execlp present function inside the bash function.
+USE A STACK OVERFLOW

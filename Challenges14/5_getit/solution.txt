@@ -1,0 +1,9 @@
+So, in this case we used a combination of gdb, radare2 and ida.
+From the disassembly, especially from ida we can see 2 fprintf functions,
+and 1 fputc function: the first fprint function write all asterisks in the flag.txt
+file located in /tmp, and the cicle with fputc in the file and change one by one the 
+asterisks with characters, but the second fprintf reset the all asterisks string in the flag 
+file at the end of every putc. The solution is to delete this second fprintf with RADARE2, and then 
+execute the program with GDB and stop it just before it remove the file.
+
+flag: SharifCTF{b70c59275fcfa8aebf2d5911223c6589}

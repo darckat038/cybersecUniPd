@@ -1,0 +1,12 @@
+So here, analyzing the program with ida/gdb we find out that when 
+the check for every part is done, there is an if else part. In this 
+part the program, based on the result of the checks, put on the test done,
+FAIL or PASS. So in assembly there are 3 je instruction consecutively that 
+jump respectively if the result are UNKOWN, FAILED or PASS.
+We need to modify the first je to jump unconditionally to the PASS section.
+
+Steps:
+1. open the file with radare2
+2. seek the line of the first je of the if part (0x1238)
+3. write on that line the code to jump to the PASS part (jmp 0x12d8)
+4. and BOOM! now the program will PASS when executed either normally or with gdb
