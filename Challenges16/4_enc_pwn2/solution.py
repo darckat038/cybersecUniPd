@@ -4,7 +4,7 @@
 #the stack where we will place the shellcode.
 
 #Steps:
-#1. find if there is padding (file with instruction in CyberChallenges dir)
+#1. find if there is padding (see findPadding.txt in main dir)
 #2. find the size of the padding
 #3. we need to fill up the buffer variable, the padding, the base pointer
 #4. Then put the address of the lol function
