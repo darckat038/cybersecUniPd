@@ -1,0 +1,9 @@
+Same way as the previous program, the solution here is to OVERWRITE some 
+lines of code. As we can see, here the program will try to decrypt the flag
+in a certain amount of time, but it fails everytime because the timer is 
+too short. The solution here is to completely remove the timer.
+Steps:
+1. find the line where it set the time (0x400845)
+2. OVERWRITE that line with some code, NOP for example
+2.1 code to write ("wa nop;nop;nop;nop;nop", ALWAYS LOOK AT THE SIZE TO WRITE)
+3. execute and BOOM! here is the flag
