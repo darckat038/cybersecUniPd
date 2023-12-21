@@ -1,6 +1,8 @@
 So in this case we have two variables: one an int (pass) and one a buffer (buff).
 The goal here is to write into the pass variable to going through the if.
-We need stack overflow. We have the buff size set to 8 (bytes), but we can 
+In the stack, these two variables will be put one next(or below) the other, in this case 
+pass will be put as first and buffer as second, next to pass.
+We need a stack overflow. We have the buff size set to 8 (bytes), but we can 
 insert more than 8 chars (bytes). So we insert 9 bytes. This way, it will overflow
 the size of buff and will write into below variable in the stack (pass).
 Then we execute and BOOM! Here is the flag.
