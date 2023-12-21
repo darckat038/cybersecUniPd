@@ -1,0 +1,7 @@
+1. Open the file with gdb
+2. set a breakpoint on the padding instruction (and 0xfffffff0, $rsp (o $esp))
+3. look at the content of the $rsp casted in int (which is/are address/es)
+4. then go to next instruction (nexti or next)
+5. look at the content of the $rsp casted int int
+6. look at the difference between the stack pointer before and after
+7. that will be the size of the padding in byte
