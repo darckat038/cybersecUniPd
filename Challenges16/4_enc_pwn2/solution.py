@@ -2,6 +2,7 @@
 #So we can see that there is a function named lol, we need to
 #jump there and using the jmp instruction in it, jumping to
 #the stack where we will place the shellcode.
+
 #Steps:
 #1. find if there is padding (file with instruction in CyberChallenges dir)
 #2. find the size of the padding
