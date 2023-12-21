@@ -1,0 +1,9 @@
+Here the problem is a little bit different. You have no way to guess the 
+OTP code requested by the program. So you need first to analyze the code 
+with IDA or GDB and then OVERWRITE some lines with RADARE2.
+Steps:
+1. find the line where there is the jump based on the input (0x401e84)
+2. OVERWRITE that line with some code that will suit like NOP (1 byte)
+2.1 code example ("wa nop;nop" , REMEMBER TO LOOK AT THE SIZE TO WRITE)
+3. now if you execute, BOOM! here is the flag
+
