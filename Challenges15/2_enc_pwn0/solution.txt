@@ -1,7 +1,9 @@
 In this case, we need to enter the if by having the word "H!gh" into josh variable. 
 So we can do that by entering input of buffer size, plus some bytes that will overwrite
-the content of the josh variable in a stack overflow. In the stack, the one written in the upper part (so the last written) will be
-buffer, and josh(the first written) will be just below it. So we need to write 64 casual chars and then
-the word that the program require ("H!gh") that will be put into josh variable
+the content of the josh variable in a stack overflow. In the stack, the one written in the 
+upper part (so the last written) will be buffer, and josh(the first written) will be just 
+below it. 
+So we need to write 64 casual chars and then the word that the program require ("H!gh") 
+that will be put into josh variable
 
 N.B.: the file is compiled with 32 bits registers   ("file <file_name>")
