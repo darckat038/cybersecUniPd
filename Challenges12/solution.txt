@@ -1,0 +1,5 @@
+So here the solution was to open the executable files with a disassembler
+like ida. It will show you assembly code of the executable. Then you should
+be able to find out what you have to put in the input given by the program, 
+to get the flag. So you need to analyze lines of code to find the proper 
+requested input.
